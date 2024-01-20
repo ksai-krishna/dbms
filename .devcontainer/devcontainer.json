@@ -1,16 +1,13 @@
 {
-    "name": "PHP Dev Container",
-    "image": "mcr.microsoft.com/vscode/devcontainers/php:8.0", // Adjust PHP version if needed
-    "extensions": [
-        "felixfbecker.php-pack",
-        "formulahendry.code-runner",
-        "xdebug.php-debug"
-    ],
-    "forwardPorts": [
-        {
-            "containerPort": 80, // Adjust port if necessary
-            "hostPort": 8080
-        }
-    ],
-    "postCreateCommand": "php --version" // Optional: Verify PHP installation
+  "name": "PHP Codespace",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "felixfbecker.php-debug",
+    "ms-azuretools.vscode-docker"
+  ],
+  "settings": {
+    "php.validate.enable": true,
+    "php.validate.executablePath": "/usr/local/bin/php"
+  },
+  "postCreateCommand": "composer install"
 }
