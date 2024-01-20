@@ -1,0 +1,13 @@
+{
+  "name": "PHP Codespace",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "felixfbecker.php-debug",
+    "ms-azuretools.vscode-docker"
+  ],
+  "settings": {
+    "php.validate.enable": true,
+    "php.validate.executablePath": "/usr/local/bin/php"
+  },
+  "postCreateCommand": "composer install"
+}
